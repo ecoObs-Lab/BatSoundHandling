@@ -35,7 +35,7 @@ public struct BatSoundOverView: View {
     public var body: some View {
         VStack(spacing:0) {
             AudioWave(samples: $samples, width: 2, fillColor: $waveFillColor, normalized: false)
-                .frame(height: waveHeight)
+                .frame(width: sonaWidth, height: waveHeight)
                 .overlay(alignment: .bottomLeading) {
                     if self.selectedCall != nil {
                         Image(systemName: "chevron.up")
@@ -50,6 +50,7 @@ public struct BatSoundOverView: View {
                       scale: 1.0,
                       orientation: .left,
                       label: Text("Sonagram"))
+                .frame(width: sonaWidth)
                 .overlay(alignment: .topLeading) {
                     if self.selectedCall != nil {
                         Image(systemName: "chevron.down")
