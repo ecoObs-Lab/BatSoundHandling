@@ -66,13 +66,15 @@ public struct BatSoundOverView: View {
                         self.updateViewData()
                     }
                 }
+                .frame(width: 125)
                 Slider(value: $sonaSpread, in: -5...5) { editing in
                     if !editing {
                         self.updateViewData()
                     }
                 }
+                .frame(width: 125)
             }
-            .frame(width: sonaWidth > 400 ? 400 : sonaWidth)
+            .frame(width: 275)
         }
         .onChange(of: selectedCall) {
             if self.selectedCall != nil {
