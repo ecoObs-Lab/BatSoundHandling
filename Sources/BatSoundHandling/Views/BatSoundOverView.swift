@@ -72,8 +72,7 @@ public struct BatSoundOverView: View {
                     }
                 }
             }
-            .frame(maxWidth: .infinity)
-            //.frame(width: 800)
+            .frame(width: sonaWidth)
         }
         .onChange(of: selectedCall) {
             if self.selectedCall != nil {
