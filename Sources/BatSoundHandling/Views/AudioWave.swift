@@ -63,34 +63,3 @@ private struct AudioWaveShape: Shape {
         }.offsetBy(dx: 0, dy: rect.height / 2)
     }
 }
-
-/*public struct AudioWaveStereo: View {
-    
-    @Binding var samples: [Float]
-
-    let spacing: CGFloat
-    let width: CGFloat
-
-    
-    init(samples: Binding<Array<Float>>, spacing: CGFloat = 2, width: CGFloat = 2) {
-        self._samples = samples
-        self.spacing = spacing
-        self.width = width
-    }
-    
-    var body: some View {
-        GeometryReader { geo in
-            AudioWaveShape(samples: $samples[safe: 0..<(samples.count / 2)], spacing: spacing, width: width)
-                .fill(Color.green)
-                .background(Color.black)
-                .frame(height: geo.size.height / 2)
-                .offset(x: 0, y:0)
-            
-            AudioWaveShape(samples: $samples[safe: (samples.count / 2)..<samples.count], spacing: spacing, width: width)
-                .fill(Color.orange)
-                .background(Color.black)
-                .frame(height: geo.size.height / 2)
-                .offset(x: 0, y:geo.size.height / 2)
-        }
-    }
-}*/
