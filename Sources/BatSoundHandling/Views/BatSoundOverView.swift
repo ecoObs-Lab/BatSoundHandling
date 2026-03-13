@@ -51,7 +51,7 @@ public struct BatSoundOverView: View {
                       orientation: .left,
                       label: Text("Sonagram"))
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .frame(width: sonaWidth)
                 .overlay(alignment: .topLeading) {
                     if self.selectedCall != nil {
