@@ -50,7 +50,7 @@ public struct BatSoundOverView: View {
                       scale: 1.0,
                       orientation: .left,
                       label: Text("Sonagram"))
-                .frame(width: sonaWidth)
+                .frame(width: sonaWidth, height: CGFloat(img.height))
                 .overlay(alignment: .topLeading) {
                     if self.selectedCall != nil {
                         Image(systemName: "chevron.down")
